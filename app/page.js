@@ -4,7 +4,7 @@ import ContactSection from "@/components/Contact";
 import Education from "@/components/Education";
 import ExperienceTimeline from "@/components/ExperienceTimeline";
 import Footer from "@/components/Footer";
-import NavbarHero from "@/components/NavBarHero";
+import NavbarHero from "@/components/NavbarHero";
 import ProjectsShowcase from "@/components/ProjectsShowcase";
 import Skills from "@/components/Skills";
 
