@@ -7,7 +7,6 @@ import Footer from "@/components/Footer";
 import NavbarHero from "@/components/NavBarHero";
 import ProjectsShowcase from "@/components/ProjectsShowcase";
 import Skills from "@/components/Skills";
-import Image from "next/image";
 
 export default function Home() {
   return (
