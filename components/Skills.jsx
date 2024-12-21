@@ -10,8 +10,9 @@ const Skills = () => {
       skills: [
         { name: "C++", proficiency: 95 },
         { name: "JavaScript", proficiency: 90 },
-        { name: "Python", proficiency: 85 },
-        { name: "C", proficiency: 80 }
+        { name: "Python", proficiency: 90 },
+        { name: "C", proficiency: 80 },
+        { name: "TypeScript", proficiency: 70 },
       ]
     },
     frameworks: {

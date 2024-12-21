@@ -7,7 +7,7 @@ const ProjectsShowcase = () => {
       description: "A high-performance, event-driven WebSocket notification system built with the ws package and Redis pub/sub, designed for horizontal scalability.",
       image: "/projects/scalable-ws.png?text=Scalable+WS+Server",
       githubUrl: "https://github.com/AKSourav/scalable-websocket.server",
-      technologies: ["WS", "NodeJS", "Redis", "AWS"]
+      technologies: ["TypeScript","WS", "NodeJS", "Redis", "AWS"]
     },
     {
       id: 1,
