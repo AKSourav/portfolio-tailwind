@@ -1,9 +1,24 @@
 import React from 'react';
 
 const ProjectsShowcase = () => {
-  const projects = [
+  const projects = [{
+      id: 0,
+      name: "Scalable WebSocket",
+      description: "A high-performance, event-driven WebSocket notification system built with the ws package and Redis pub/sub, designed for horizontal scalability.",
+      image: "/projects/scalable-ws.png?text=Scalable+WS+Server",
+      githubUrl: "https://github.com/AKSourav/SignWave-web",
+      technologies: ["WS", "NodeJS", "Redis", "AWS"]
+    },
     {
       id: 1,
+      name: "SignWave",
+      description: "Real-Time ISL to English Translator Web-App",
+      image: "/projects/signwave1.png?text=ISL+Platform",
+      githubUrl: "https://github.com/AKSourav/SignWave-web",
+      technologies: ["Reactjs", "WebRTC", "Django REST", "PostgreSQL", "FastApi", "AWS"]
+    },
+    {
+      id: 2,
       name: "Isolate",
       description: "Web-based GUI for Docker deployments on Kubernetes with automated scaling and monitoring",
       image: "/projects/isolate.png?text=Kubernetes+Dashboard",
@@ -11,20 +26,12 @@ const ProjectsShowcase = () => {
       technologies: ["NodeJS", "NextJS", "Docker", "Kubernetes", "AWS"]
     },
     {
-      id: 2,
+      id: 3,
       name: "ScrapTrade",
       description: "User-friendly platform for recyclable materials trading with integrated map-based pickup system",
       image: "/projects/scrapetrade.png?text=ScrapTrade+Platform",
       githubUrl: "https://github.com/AKSourav/WasteManagement.Web",
       technologies: ["NextJS", "Django REST", "PostgreSQL", "Maps API"]
-    },
-    {
-      id: 3,
-      name: "SignWave",
-      description: "Real-Time ISL to English Translator Web-App",
-      image: "/projects/signwave1.png?text=ISL+Platform",
-      githubUrl: "https://github.com/AKSourav/SignWave-web",
-      technologies: ["Reactjs", "WebRTC", "Django REST", "PostgreSQL", "FastApi", "AWS"]
     },
     {
       id: 4,
