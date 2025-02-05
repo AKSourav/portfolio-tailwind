@@ -1,5 +1,6 @@
 "use client"
 import React, { useState } from 'react';
+import { sendEmail } from '@/app/actions/sendEmail';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -7,6 +8,8 @@ const ContactSection = () => {
     email: '',
     message: ''
   });
+  const [status, setStatus] = useState({ type: '', message: '' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -15,10 +18,34 @@ const ContactSection = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+    setStatus({ type: '', message: '' });
+
+    try {
+      const result = await sendEmail(formData);
+      
+      if (result.success) {
+        setStatus({
+          type: 'success',
+          message: 'Message sent successfully! I will get back to you soon.'
+        });
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setStatus({
+          type: 'error',
+          message: 'Failed to send message. Please try again later.'
+        });
+      }
+    } catch (error) {
+      setStatus({
+        type: 'error',
+        message: 'An error occurred. Please try again later.'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -145,11 +172,22 @@ const ContactSection = () => {
                 />
               </div>
 
+              {status.message && (
+                <div className={`p-4 rounded-xl ${
+                  status.type === 'success' 
+                    ? 'bg-green-500/10 text-green-400 border border-green-500/50' 
+                    : 'bg-red-500/10 text-red-400 border border-red-500/50'
+                }`}>
+                  {status.message}
+                </div>
+              )}
+
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium rounded-xl px-6 py-3 hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-[1.02]"
+                disabled={isSubmitting}
+                className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium rounded-xl px-6 py-3 hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Send Message
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
             </div>
           </form>

@@ -18,7 +18,7 @@ export default function Home() {
       <Skills/>
       <Achievements/>
       <Education/>
-      {/* <ContactSection/> */}
+      <ContactSection/>
       <Footer/>
     </>
   );
