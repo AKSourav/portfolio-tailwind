@@ -4,6 +4,10 @@ import { useState } from 'react';
 
 const NavbarHero = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const handleResumeDownload = () => {
+    const resumeUrl = "https://drive.google.com/file/d/1GOk5-KyftCST_RL0mCOTxGbgglrvtlbW/view";
+    window.open(resumeUrl, '_blank');
+  };
 
   return (
     <section id="navbar_hero" className="min-h-screen relative bg-gradient-to-br from-indigo-950 via-purple-950 to-neutral-950">
@@ -15,7 +19,7 @@ const NavbarHero = () => {
               <div className="flex-shrink-0">
                 <a href="#" className="text-white font-bold text-xl">AKS</a>
               </div>
-              
+
               <div className="hidden lg:flex items-center space-x-8">
                 <a href="#about" className="text-indigo-300 hover:text-white transition-colors duration-300">About</a>
                 <a href="#experience" className="text-indigo-300 hover:text-white transition-colors duration-300">Experience</a>
@@ -27,8 +31,8 @@ const NavbarHero = () => {
               </div>
 
               <div className="lg:hidden">
-                <button 
-                  onClick={() => setIsOpen(!isOpen)} 
+                <button
+                  onClick={() => setIsOpen(!isOpen)}
                   className="text-indigo-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
                   aria-controls="mobile-menu"
                   aria-expanded={isOpen}
@@ -82,6 +86,26 @@ const NavbarHero = () => {
           <p className="text-xl sm:text-2xl text-indigo-200 mb-12">Full Stack Developer</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <a href="#contact" className="px-8 py-4 rounded-full bg-indigo-600 text-white hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105">Get in Touch</a>
+            <button
+              onClick={handleResumeDownload}
+              className="bg-transparent border-2 border-blue-500 text-white font-medium rounded-full px-8 py-4 hover:bg-blue-500/10 transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center gap-2"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                />
+              </svg>
+              Resume
+            </button>
             <a href="#projects" className="px-8 py-4 rounded-full border-2 border-indigo-500 text-white hover:bg-indigo-500/10 transition-all duration-300 transform hover:scale-105">View Projects</a>
           </div>
         </div>
