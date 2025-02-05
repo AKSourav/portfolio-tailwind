@@ -7,8 +7,10 @@ const ExperienceTimeline = () => {
       company: "Avinya NeuroTech",
       period: "March 2024 – Present",
       achievements: [
-        "Built scalable medical treatment platform with microservices architecture, reducing seizure prediction time by 40%",
-        "Implemented parallel processing with RabbitMQ, achieving 50% CPU optimization"
+        "Led microservices architecture design for medical platform, improving scalability and handling 5,000+ daily users",
+        "Optimized backend services to reduce abnormality prediction time by 80% using an AI model developed by the research team",
+        "Implemented Redis Pub/Sub and WebSocket system achieving sub-100ms latency for critical medical alerts",
+        "Built RabbitMQ queue architecture with multithreading, increasing data processing speed by 65% and system efficiency"
       ],
       skills: ["FastAPI", "PostgreSQL", "RabbitMQ", "Docker", "AWS"],
       dotColor: "bg-indigo-400",
@@ -19,8 +21,11 @@ const ExperienceTimeline = () => {
       company: "Settyl Tech India Private Limited",
       period: "July 2023 – Nov 2023",
       achievements: [
-        "Developed inventory management system improving accuracy by 35% and operational efficiency by 20%",
-        "Created 20+ RESTful APIs and integrated MongoDB triggers for 40% faster data processing"
+        "Developed an inventory and logistics management website that streamlined operations and reduced manual entry tasks by 50%",
+        "Orchestrated the transformation of the company’s micro frontend architecture, focusing on entity visibility and production enablement modules",
+        "Created 20+ RESTful APIs in their backend microservice architecture in Nodejs",
+        "Integrated MongoDB triggers with Azure Functions, reducing data processing time by 40%",
+        "Enabled real-time data updates using Socket.io to support critical decision-making processes"
       ],
       skills: ["MongoDB", "ExpressJS", "ReactJS", "NodeJS", "Azure"],
       dotColor: "bg-purple-400",
